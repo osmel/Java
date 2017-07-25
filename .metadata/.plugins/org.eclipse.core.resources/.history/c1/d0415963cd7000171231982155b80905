@@ -1,0 +1,38 @@
+package generico;
+
+public class Genericos {
+
+	
+	  public  void Clase_generica() {
+		   //la clase generica se adapta en cada momento para cada tipo de objeto que se declare
+		   
+		   // instanciando esta clase de tipo <string>, por tanto todo lo q trate sera cadena
+		   ClaseGenerica<String>  cadena = new ClaseGenerica<String>("osmel");
+		   cadena.setValor("nuevo valor");
+		   
+		   ClaseGenerica<Integer>  cadena = new ClaseGenerica<Integer>(new Integer(4));
+		   
+		   cadena.setValor("nuevo valor");
+		   
+		   
+		   System.out.println(una.getPrimero());
+		   System.out.println(dos.getPrimero());
+		   
+		   //caso <Empleados>
+	        
+		   //1--creamos el objeto
+		   Empleados objetoEmpleado = new Empleados("prueba generica",39); 
+		   //
+		   Pareja<Empleados>  miEmpleado = new Pareja<Empleados>();
+		   miEmpleado.setPrimero(objetoEmpleado);  //aqui ponemos el objeto q nos pide
+		   System.out.println(miEmpleado.getPrimero().toString());
+		  
+		   
+	   }  
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

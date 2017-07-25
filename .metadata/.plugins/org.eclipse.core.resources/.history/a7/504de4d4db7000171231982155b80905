@@ -1,0 +1,70 @@
+package Flujos;
+
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+
+public class Flujo_char_teclado_ficheroSImple {
+
+	public static void lectura_archivo(){
+		/*
+		   "clase FileReader": Lectura de un archivo 
+         "clase StringBuffer": para guardar información
+		 */
+		  	FileReader entrada=null;
+	        StringBuffer cadena=new StringBuffer();
+	        try  {
+	           entrada=new FileReader("src/Flujos/entrada.java");
+	           int c;
+	           while((c=entrada.read())!=-1){
+	        	   cadena.append((char)c);
+	           }
+	           System.out.print(cadena);
+	        }catch (IOException ex) {
+	    	  System.out.println(ex);
+		    }finally{  // una claúsula finally que siempre se llama independientemente de que se produzcan o no errores en el proceso de lectura/escritura.
+		        if(entrada!=null){
+		            try{
+		                entrada.close();
+		            }catch(IOException ex){}
+		        }
+		    }  
+		
+	}
+	public static void escritura_archivo(){
+		/*
+		 "OutputStreamWriter": Convertir un flujo de byte a caracteres
+		 "Clase BufferedWriter": Permiten hacer escrituras sencillas a flujos de caracteres, 
+        El uso sería:
+         1- Convertir un flujo de byte a caracteres con la clase OutputStreamWriter
+            Writer osw=new OutputStreamWriter(System.out);
+         2- Hacer escrituras más faciles y sencilla apartir del flujos de caracteres que ya tenemos, con la clase BufferedReader
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+           
+            BufferedWriter cuenta con métodos q son los que nos hacen facil el trabajo
+		*/
+
+		 
+		
+        try {
+     		Writer osw=new OutputStreamWriter(System.out);
+	  		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+			bw.write("texto");
+			bw.newLine();
+		    bw.flush(); //Guardamos los cambios al fichero	
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+       	
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

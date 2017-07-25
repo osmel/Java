@@ -1,0 +1,16 @@
+package Flujos;
+
+public class Flujo_char_teclado_ficheroSImple {
+
+	public static void lectura_archivo(){
+		/*
+		 Lectura de un archivo con "clase FileReader"
+         "clase StringBuffer" para guardar información
+		 */
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

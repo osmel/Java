@@ -1,0 +1,50 @@
+package Flujos;
+
+import java.io.IOException;
+import java.io.PrintStream;
+
+public class escribiendo_PrintWriter_PrintStream {
+
+	public static void salida_Pantalla_automatica_PrintStream(){
+		/*
+		 	PrintWriter: Buffer de salida es vaciado automaticamente los datos, 
+		 				y se muestran de forma automatica
+		*/
+
+        try {
+        	PrintStream ps = new PrintStream( System.out ); 
+        	int a =2;    	
+        	ps.println(a); 	
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}
+	}   	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		/*
+		 Escribir información
+			Streams de Salida de Bytes(OutputStream)
+				PrintStream: Buffer de salida es vaciado automaticamente los datos, y
+				 			 se muestran de forma automatica
+				PrintStream ps = new PrintStream( System.out ); 
+				int a =2;    	
+				fs.println(a); 
+			  
+			Streams de Salida de caracteres(Writer)
+				PrintWriter: Escribe representaciones textuales de objetos java en un Writer.
+							 Hay que forzar el vaciado del buffer de salida. 
+							 Invocando el método flush
+				PrintWriter fs = new PrintWriter( System.out ); 
+				int a =2; 
+				fs.println(a); 
+				fs.flush(); 
+		 * 
+		 */
+
+	}
+
+}

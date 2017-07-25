@@ -1,0 +1,43 @@
+package generico;
+
+
+/*
+ * Después del nombre de la clase se indica los parámetros de tipos con el formato <T1, T2, T3, …>.
+ T: Estos argumentos que pongo en la clase son los tipos genericos, 
+  que podre utilizar dentro de esta clase para referenciar a un tipo que no tengo determinado, 
+  porque cuando instancien esta clase es que especificaran el tipo con el que trabajara la clase:
+ */
+public class ClaseGenerica<T> {
+	   private T valor;
+	   
+		public  ClaseGenerica(T mivalor) { //constructor q recibe cualquier valor  
+	        //super();
+	        valor=mivalor;
+	        
+	    }    
+		
+		   public void setValor(T nuevovalor) {
+				 this.valor=nuevovalor;   
+		   }
+		
+		   public  T getValor() {
+				 return valor;   
+		   }
+		   
+
+		   public static <T> String getCantidad(T[] a) { 
+			   return "El array tiene "+a.length+ " Elementos"; 
+		   }
+		   
+		   //metodo generico que espera recibir como argumento cualquier tipo de Empleados
+		   //o cualquier(?) subclase(que herede de empleados, como es el caso de jefe).
+		   /*public  static  void imprimirTrab(ClaseGenerica<? extends Empleados> p) {
+			    Empleados primero = p.getPrimero();
+			    System.out.println(primero); 
+				 
+		   }*/
+		   
+		   
+		   
+	}
+

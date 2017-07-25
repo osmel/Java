@@ -1,0 +1,31 @@
+package Flujos;
+
+public class Flujo_Objetos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		Serialización de objetos
+
+		Streams de Entrada de Bytes(InputStream)
+		ObjectInputStream: Lee representaciones binarias de objetos java, se utiliza para deserializar objetos.
+
+		ObjectInputStream entrada=new ObjectInputStream(new FileInputStream("media.obj")); 
+		String str=(String)entrada.readObject(); 
+		Lista obj1=(Lista)entrada.readObject(); 
+		System.out.println(str+obj1); 
+		entrada.close();	
+
+		Streams de Salida de Bytes(OutputStream)
+		ObjectOutputStream: Escribe representaciones binarias de objetos java a un OutputStream. Se utiliza para serializar objetos.
+
+		Lista lista1= new Lista(new int[]{12, 15, 11, 4, 32}); 
+		ObjectOutputStream salida=new ObjectOutputStream(new FileOutputStream("media.obj")); 
+		salida.writeObject("guardar este string y un objeto\n"); 
+		salida.writeObject(lista1); 
+		salida.close();*/
+		
+	}
+
+}
