@@ -15,14 +15,17 @@ public class Libro_equals_hashCode {
 	public static void compararLibros_hashCode(){
 		Libro libro1 = new Libro("titulo1", "autor1", 22);
 		Libro libro2 = new Libro("titulo1", "autor1", 20);
+		Libro libro3 = new Libro("titulo1", "autor1", 22);
 		if (libro1.equals(libro2)) {
 			System.out.println("son iguales");
 			System.out.println(libro1.hashCode());//referencia de libro1
 			System.out.println(libro2.hashCode());//referencia de libro2
+			
 		} else {
 			System.out.println("son diferentes");
 			System.out.println(libro1.hashCode());//referencia de libro1
-			System.out.println(libro2.hashCode());//referencia de libro2			
+			System.out.println(libro2.hashCode());//referencia de libro2
+						
 		}
 	}	
 	
