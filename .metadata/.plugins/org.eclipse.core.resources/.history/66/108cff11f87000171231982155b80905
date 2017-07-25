@@ -1,0 +1,20 @@
+package Colecciones;
+
+public class Libro_equals_hashCode {
+
+	public static void libro(){
+		Libro libro1 = new Libro("titulo1", "autor1", 20);
+		Libro libro2 = new Libro("titulo1", "autor1", 20);
+		if (libro1.equals(libro2)) {
+			System.out.println("son iguales");
+		} else {
+			System.out.println("son diferentes");
+		}
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
