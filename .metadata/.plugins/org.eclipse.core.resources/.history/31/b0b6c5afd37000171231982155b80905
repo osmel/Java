@@ -1,6 +1,0 @@
-package generico;
-import Colecciones.Empleados;
-
-public class Jefe extends Empleados {
-
-}
